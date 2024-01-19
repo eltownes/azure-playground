@@ -15,3 +15,12 @@ To exclude repo from language stats:
         - `*.html linguist-vendored`
     - a single file:
         - `foo.js linguist-vendored`
+
+### Branches
+
+- quickstarts-first-spring-app: 'hello world' spring boot app on azure
+
+
+<br>
+---
+<br>
