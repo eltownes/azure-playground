@@ -89,6 +89,8 @@ azd up
 
 - for default config, need to change Azure ingress port to `8080`
 
+- test deployment
+
 - delete everything ... w/ prompts
 ```
 azd down
