@@ -1,17 +1,6 @@
-# Azure Playground
+Original tutorial:
+https://learn.microsoft.com/en-us/azure/spring-apps/quickstart?pivots=sc-enterprise&tabs=Azure-portal%2CIntelliJ%2CConsumption-workload
 
-### Entire repo has been excluded from language stats
+A 'Hello World' spring app.
 
-To exclude repo from language stats:
-- in root create `.gitattributes`
-- then add to `.gitattributes`:
-    - entire repo:
-        - `* linguist-vendored`
-    - directory named 'foo':
-        - `foo/* linguist-vendored`
-    - nested directories:
-        - `foo/bar/* linguist-vendored`
-    - files of type 'html':
-        - `*.html linguist-vendored`
-    - a single file:
-        - `foo.js linguist-vendored`
+
