@@ -5,7 +5,7 @@ https://learn.microsoft.com/en-us/azure/spring-apps/quickstart?pivots=sc-enterpr
 
 Notes:
 - using `azd` cmd line & not graphical IDE
-- change Azure port `80` to `8080`
+- change Azure ingress port from `80` to `8080`
 
 <br>
 
@@ -36,16 +36,18 @@ cp -r . ~/IdeaProjects/azure-playground
 ```
 package com.example.demo;
 
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/")
 public class HelloController {
 
-    @RequestMapping("/")
-    public String index() {
-        return "Hello World";
-     }
+    @GetMapping("/")
+    public String hello() {
+        return "Hello World!";
+    }
 }
 ```
 
