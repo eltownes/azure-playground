@@ -4,18 +4,17 @@
 https://spring.academy
 
 Notes:
-- ?
-- ?
+- Doing this within IntelliJ
 
 <br>
 
 Prep and run it locally:
 
-
+- download folder
 ```
 cd ~/Downloads
 ```
-- 
+
 - create project from spring.io
 ```
 mkdir -p cashcard && \
@@ -33,10 +32,13 @@ curl -o 'cashcard.tar' 'https://start.spring.io/starter.tgz?'\
 tar -xvf 'cashcard.tar' -C 'cashcard'
 ```
 
-- copy the project from the `dir` to the active branch/dir
+- copy the project to the current repo/branch/dir
 ```
+cd cashcard
 cp -r . ~/IdeaProjects/spring-azure-playground
 ```
+
+- IntelliJ Gradle prompt to build will pop up
 
 <br>
 
