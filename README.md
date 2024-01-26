@@ -1,25 +1,68 @@
-# Azure Playground
+### Cash card rest api
 
-### Entire repo has been excluded from language stats
+### Original tutorial:
+https://spring.academy
 
-To exclude repo from language stats:
-- in root create `.gitattributes`
-- then add to `.gitattributes`:
-    - entire repo:
-        - `* linguist-vendored`
-    - directory named 'foo':
-        - `foo/* linguist-vendored`
-    - nested directories:
-        - `foo/bar/* linguist-vendored`
-    - files of type 'html':
-        - `*.html linguist-vendored`
-    - a single file:
-        - `foo.js linguist-vendored`
-
-### Branches
-
-- quickstarts-first-spring-app: 'hello world' spring boot app on azure
+Notes:
 - ?
+- ?
+
+<br>
+
+Prep and run it locally:
+
+
+```
+cd ~/Downloads
+```
+- 
+- create project from spring.io
+```
+mkdir -p cashcard && \
+curl -o 'cashcard.tar' 'https://start.spring.io/starter.tgz?'\
+'type=gradle-project&'\
+'language=java&'\
+'dependencies=web&'\
+'name=CashCard&'\
+'groupId=example&'\
+'artifactId=cashcard&'\
+'description=CashCard+service+for+Family+Cash+Cards&'\
+'packaging=jar&'\
+'packageName=example.cashcard&'\
+'javaVersion=17' && \
+tar -xvf 'cashcard.tar' -C 'cashcard'
+```
+
+- copy the project from the `dir` to the active branch/dir
+```
+cp -r . ~/IdeaProjects/spring-azure-playground
+```
+
+<br>
+
+- example API contract:
+```
+Request
+  URI: /cashcards/{id}
+  HTTP Verb: GET
+  Body: None
+
+Response:
+  HTTP Status:
+    200 OK if the user is authorized and the Cash Card was successfully retrieved
+    401 UNAUTHORIZED if the user is unauthenticated or unauthorized
+    404 NOT FOUND if the user is authenticated and authorized but the Cash Card cannot be found
+  Response Body Type: JSON
+  Example Response Body:
+    {
+      "id": 99,
+      "amount": 123.45
+    }
+```
+
+
+
+
 
 
 
